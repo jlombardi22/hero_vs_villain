@@ -1,10 +1,17 @@
 from django.db import models
-
+import super_type
+from super_type.models import SuperType
 # Create your models here.
-class Super(models.Model):
-    name = models.CharField(max_length=255),
-    alter_ego = models.CharField(max_length=255),
-    primary_ability = models.CharField(max_length=255),
-    secondary_ability = models.CharField(max_length=255),
-    catchphrase = models.CharField(max_length=255)
-    super_type = models.ForeignKey
+
+
+class Supers(models.Model):
+    name = models.CharField(max_length=255, null=True)
+    alter_ego = models.CharField(max_length=255, null=True)
+    primary_ability = models.CharField(max_length=255, null=True)
+    secondary_ability = models.CharField(max_length=255, null=True)
+    catchphrase = models.CharField(max_length=255, null=True)
+    super_type = models.ForeignKey(
+        SuperType, on_delete=models.CASCADE, null=True)
+
+    # super_type = models.ForeignKey(
+    #   SuperType, on_delete=models.CASCADE, null=True)

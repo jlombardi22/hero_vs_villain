@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from .models import Super
+from .models import Supers
 
 
-class SuperSerializer(serializers.ModelSerializer):
+class SupersSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Super
+        model = Supers
         fields = ['id', 'name', 'alter_ego', 'primary_ability',
                   'secondary_ability', 'catchphrase', 'super_type']
