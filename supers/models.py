@@ -1,5 +1,4 @@
 from django.db import models
-import super_type
 from super_type.models import SuperType
 # Create your models here.
 
